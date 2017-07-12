@@ -1,0 +1,20 @@
+Wild\MarmiBundle\Entity\picture:
+    type: entity
+    table: null
+    repositoryClass: Wild\MarmiBundle\Repository\pictureRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        src:
+            type: string
+            length: 255
+            nullable: true
+        alt:
+            type: string
+            length: 255
+            nullable: true
+    lifecycleCallbacks: {  }

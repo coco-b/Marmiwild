@@ -1,0 +1,26 @@
+Wild\MarmiBundle\Entity\category:
+    type: entity
+    table: null
+    repositoryClass: Wild\MarmiBundle\Repository\categoryRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        entree:
+            type: string
+            length: 255
+        plat:
+            type: string
+            length: 255
+        dessert:
+            type: string
+            length: 255
+
+    oneToMany:
+        recettes:
+             targetEntity: Wild\MarmiBundle\Entity\recette
+             mappedBy: categories
+             cascade: ['all']

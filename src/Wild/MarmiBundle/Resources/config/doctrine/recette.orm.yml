@@ -1,0 +1,31 @@
+Wild\MarmiBundle\Entity\recette:
+    type: entity
+    table: null
+    repositoryClass: Wild\MarmiBundle\Repository\recetteRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        name:
+            type: string
+            length: 255
+        description:
+            type: string
+            length: 255
+        ingredient:
+            type: string
+            length: 255
+
+    manyToOne:
+         categories:
+            targetEntity: Wild\MarmiBundle\Entity\category
+            inversedBy: recettes
+
+    oneToOne:
+         picture:
+            targetEntity: Wild\MarmiBundle\Entity\Picture
+
+

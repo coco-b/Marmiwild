@@ -1,3 +1,7 @@
+wild_marmi:
+    resource: "@WildMarmiBundle/Resources/config/routing.yml"
+    prefix:   /
+
 app:
     resource: '@AppBundle/Controller/'
     type: annotation
