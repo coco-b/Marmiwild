@@ -49,6 +49,12 @@
                             <a class="waves-effect waves-light center-align btn index_btn" href=" {{ path('wild_recette_add', {'id': recette.id}) }}">Effacer</a>
                         </div>
                     </div>
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <a class="waves-effect waves-light center-align btn index_btn formEditRecette" data-id="{{ recette.id }}" href="#modal{{ recette.id }}">Modifier</a>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </div>

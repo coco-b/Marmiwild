@@ -3,6 +3,26 @@ wild_recette_add:
     defaults: { _controller: WildMarmiBundle:Marmi:add }
 
 
+wild_recette_list:
+    path:     /
+    defaults: { _controller: WildMarmiBundle:Marmi:list }
+
+
+wild_recette_delete:
+    path:     /{id}/delete
+    defaults: { _controller: WildMarmiBundle:Marmi:delete}
+    requirements:
+        id: '\d+'
+
+wild_recette_editValide:
+    path:     /{id}/recette/edit
+    defaults: { _controller: WildMarmiBundle:Marmi:valideEdit }
+
+wild_recette_edit:
+    path: /editRecette
+    defaults: { _controller: WildMarmiBundle:Marmi:editActivite}
+
+
 wild_marmi_homepage:
     path:     /
     defaults: { _controller: WildMarmiBundle:Default:index }
