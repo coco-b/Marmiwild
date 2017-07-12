@@ -5,7 +5,7 @@ namespace Wild\MarmiBundle\Entity;
 /**
  * recette
  */
-class recette
+class Recette
 {
     /**
      * @var int

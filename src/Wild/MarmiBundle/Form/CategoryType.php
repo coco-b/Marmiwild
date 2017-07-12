@@ -8,7 +8,7 @@ use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
-class recetteType extends AbstractType
+class CategoryType extends AbstractType
 {
     /**
      * {@inheritdoc}
@@ -16,14 +16,12 @@ class recetteType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('name', TextType::class )
-            ->add('description', TextType::class)
-            ->add('ingredient',TextType::class)
-            ->add('picture', PictureType::class)
-            ->add('categories', TextType::class)
+            ->add('entree',TextType::class)
+            ->add('plat', TextType::class)
+            ->add('dessert', TextType::class)
             ->add('submit', SubmitType::class, array(
-        'label'=>'Valider'
-    ));
+                'label'=>'Valider'
+            ));
     }
     
     /**
@@ -32,7 +30,7 @@ class recetteType extends AbstractType
     public function configureOptions(OptionsResolver $resolver)
     {
         $resolver->setDefaults(array(
-            'data_class' => 'Wild\MarmiBundle\Entity\recette'
+            'data_class' => 'Wild\MarmiBundle\Entity\category'
         ));
     }
 
@@ -41,7 +39,7 @@ class recetteType extends AbstractType
      */
     public function getBlockPrefix()
     {
-        return 'wild_marmibundle_recette';
+        return 'wild_marmibundle_category';
     }
 
 

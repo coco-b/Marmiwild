@@ -1,2 +1,24 @@
 {% extends 'layout.html.twig' %}
 
+{% block body %}
+
+    {% for recette in categories.recette %}
+    <div class="row">
+        <div class="col s12 m7">
+            <div class="card">
+                <div class="card-image">
+                    <img class="card_picture" style="background-image: url('{{ asset('uploads/pictures/' ~ recette.picture.src ) }}'); background-size:cover; background-position:center"/>
+                    <span class="card-title">{{ recette.name }}</span>
+                <div class="card-content">
+                    <p>{{ recette.description }}</p>
+                    <p>{{ recette.ingredient }}</p>
+                </div>
+                <div class="card-action">
+                    <a href="#">Ou trouvez vos ingredients : </a>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endfor %}
+
+{% endblock %}

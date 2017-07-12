@@ -5,7 +5,7 @@ namespace Wild\MarmiBundle\Entity;
 /**
  * picture
  */
-class picture
+class Picture
 {
     /**
      * @var int

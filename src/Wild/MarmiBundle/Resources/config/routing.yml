@@ -1,3 +1,8 @@
+wild_recette_add:
+    path:     /
+    defaults: { _controller: WildMarmiBundle:Marmi:add }
+
+
 wild_marmi_homepage:
     path:     /
     defaults: { _controller: WildMarmiBundle:Default:index }

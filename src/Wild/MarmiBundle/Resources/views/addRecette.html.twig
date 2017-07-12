@@ -1,0 +1,58 @@
+{% extends 'layout.html.twig' %}
+
+{% block body %}
+
+    <div id="recette">
+        <div class="container recette">
+            <div class="row">
+                <a class = "offset-s4 offset-m4 col s4 m4 waves-effect teal z-depth-5 btn align-center " href="#modalthemes">Ajouter un theme</a>
+            </div>
+            <div id="modalrecette" class="modal">
+                <div class="modal-content">
+                    {{ form_start(form) }}
+                    <div class="row">
+                        <div class="input-field col s12">
+                            {{ form_label (form.name) }}
+                            {{ form_widget (form.name) }}
+                            {{ form_errors (form.name) }}
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s12">
+                            {{ form_label (form.description) }}
+                            {{ form_widget (form.description) }}
+                            {{ form_errors (form.description) }}
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s12">
+                            {{ form_label (form.ingredient) }}
+                            {{ form_widget (form.ingredient) }}
+                            {{ form_errors (form.ingredient) }}
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s12">
+                            {{ form_label (form.picture) }}
+                            {{ form_widget (form.picture) }}
+                            {{ form_errors (form.picture) }}
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s12">
+                            {{ form_widget(form.submit, {'attr': {'class': 'btn btn-primary'}}) }}
+                        </div>
+                        {{ form_end(form) }}
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <a class="waves-effect waves-light center-align btn index_btn" href=" {{ path('wild_recette_add', {'id': recette.id}) }}">Effacer</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+{% endblock %}

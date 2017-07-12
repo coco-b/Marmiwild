@@ -3,12 +3,13 @@
 namespace Wild\MarmiBundle\Entity;
 
 /**
- * category
+ * Category
  */
 class category
 {
+
     /**
-     * @var int
+     * @var integer
      */
     private $id;
 
@@ -27,11 +28,23 @@ class category
      */
     private $dessert;
 
+    /**
+     * @var \Doctrine\Common\Collections\Collection
+     */
+    private $recettes;
+
+    /**
+     * Constructor
+     */
+    public function __construct()
+    {
+        $this->recettes = new \Doctrine\Common\Collections\ArrayCollection();
+    }
 
     /**
      * Get id
      *
-     * @return int
+     * @return integer
      */
     public function getId()
     {
@@ -108,18 +121,6 @@ class category
     public function getDessert()
     {
         return $this->dessert;
-    }
-    /**
-     * @var \Doctrine\Common\Collections\Collection
-     */
-    private $recettes;
-
-    /**
-     * Constructor
-     */
-    public function __construct()
-    {
-        $this->recettes = new \Doctrine\Common\Collections\ArrayCollection();
     }
 
     /**
